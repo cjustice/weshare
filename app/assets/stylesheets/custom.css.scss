@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 
-$grayLight: #000000;
+$grayLight: #e0e0e0;
 $grayMediumLight: #000000;
 
 
@@ -50,7 +50,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $gray;
 }
 
 p {
@@ -77,13 +77,26 @@ p {
   }
 }
 
+.container {
+  .jumbotron {
+    a {
+      color: #FCFCFC;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: $gray;
   a {
     color: $gray;
     &:hover {
