@@ -2,7 +2,9 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$grayLight: #000000;
+$grayMediumLight: #000000;
+
 
 /* universal */
 
@@ -85,7 +87,7 @@ footer {
   a {
     color: $gray;
     &:hover {
-      color: $grayDarker;
+      color: $gray;
     }
   }
   small {
