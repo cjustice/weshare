@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   			uniqueness: true
   	has_secure_password
 
+    geocoded_by :address #read the address
+    after_validation :geocode #set the lat and long based on address 
+
   	def User.new_remember_token
 	    SecureRandom.urlsafe_base64
 	  end
