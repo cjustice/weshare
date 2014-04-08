@@ -11,6 +11,8 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate'
 gem 'geocoder'
+gem 'gmaps4rails'
+gem 'json'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

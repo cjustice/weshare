@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap/collapse.js
+//= require bootstrap/dropdown.js
 //= require turbolinks
+//= require underscore
+//= require gmaps/google
 //= require_tree .
