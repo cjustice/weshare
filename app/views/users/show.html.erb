@@ -15,17 +15,19 @@
     </section>
   </aside>
 
-  	<div class="goog-map" style='width: 100%;'>
+  <% if !(@hash[0][:lat].nil?) && !(@hash[0][:lng].nil?) %>
+  <div class="goog-map" style='width: 100%;'>
   		<div id="map" style='height: 400px;'></div>
 	</div>
 
 	<script type="text/javascript">
-	handler = Gmaps.build('Google');
+ 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider : {}, internal: {id: 'map'}}, function(){
 		markers = handler.addMarkers(<%=raw @hash.to_json %>);
 		handler.bounds.extendWith(markers)
 		handler.fitMapToBounds();
 	});
 	</script>
+  <% end %>
 
 </div>
