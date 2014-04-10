@@ -25,6 +25,8 @@ class UsersController < ApplicationController
       marker.lat user.latitude
       marker.lng user.longitude
     end
+    @items = @user.items #pagination code removed bc error– .paginate(page: params[:page])
+
   end
 
   def new
@@ -41,7 +43,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the WeShare!"
+      flash[:success] = "Welcome to WeShare!"
       redirect_to @user
     else
       render 'new'
@@ -86,4 +88,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
 end
