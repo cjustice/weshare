@@ -4,6 +4,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    @hash2 = Gmaps4rails.build_markers(@users) do |user, marker|
+      if !(user.latitude.nil?)
+        marker.lat user.latitude
+        marker.lng user.longitude
+      end
+    end
   end
 
   def show
