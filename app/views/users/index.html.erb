@@ -7,17 +7,19 @@
 
 <h1>All users</h1>
 
-  <div class="goog-map" style='width: 100%;'>
-  		<div id="map" style='height: 400px;'></div>
-  </div>
+    <div class="goog-map" style='width: 100%;'>
+    	<div id="multi_markers" style='height: 400px;'></div>
+    </div>
+
+    <%= gmaps4rails(@markers) %>
 
 	<script type="text/javascript">
- 	handler = Gmaps.build('Google');
-	handler.buildMap({ provider : {}, internal: {id: 'map'}}, function(){
-		markers = handler.addMarkers(<%=raw @hash2.to_json %>);
-		handler.bounds.extendWith(markers)
-		handler.fitMapToBounds();
-	});
+	 	var handler = Gmaps.build('Google');
+		handler.buildMap({ 	internal: {id: 'multi_markers'}}, function(){
+			markers = handler.addMarkers(<%=raw @hash2.to_json %>);
+			handler.bounds.extendWith(markers)
+			handler.fitMapToBounds();
+		});
 	</script>
 
 <%= will_paginate %>
