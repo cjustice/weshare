@@ -26,7 +26,6 @@ class UsersController < ApplicationController
       marker.lng user.longitude
     end
     @items = @user.items #pagination code removed bc error– .paginate(page: params[:page])
-
   end
 
   def new
