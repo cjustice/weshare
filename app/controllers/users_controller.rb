@@ -84,8 +84,11 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user?(@user)
     end
 
+<<<<<<< HEAD
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
 
+=======
+>>>>>>> 5b37028aae0391779e48bc08e2281e5d945d185e
 end
