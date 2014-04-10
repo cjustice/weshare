@@ -14,7 +14,7 @@
       </h1>
     </section>
   </aside>
-<<<<<<< HEAD
+
 
   <% if !(@hash[0][:lat].nil?) && !(@hash[0][:lng].nil?) %>
   <div class="goog-map" style='width: 100%;'>
@@ -31,7 +31,6 @@
 	</script>
   <% end %>
 
-=======
   <div class="span8">
     <% if @user.items.any? %>
       <h3>Items (<%= @user.items.count %>)</h3>
@@ -41,5 +40,4 @@
       <%= will_paginate @items %>
     <% end %>
   </div>
->>>>>>> add more item resource stuff, still no way to create them
 </div>
