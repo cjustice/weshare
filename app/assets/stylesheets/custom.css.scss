@@ -207,13 +207,59 @@ input {
 /* items */
 .items {
   list-style: none;
-  margin: 10px 0 0 0;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
+  overflow: hidden;
 }
+
+.pagination {
+    display: block;
+    padding-bottom: 15px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+    margin-left: 20px;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right: 100px;
+}
+
+.single-item {
+  min-height: 200px;
+  min-width: 200px;
+  display:block;
+  background: $grayMediumLight;
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .title {
+    display: block;
+    text-align: center;
+    text-decoration: bold;
+    margin-top: -4px;
+  }
+
+  .borrow-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+}
+
 .content {
   display: block;
 }

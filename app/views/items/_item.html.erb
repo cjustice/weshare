@@ -1,6 +1,8 @@
-<li>
-	<span class="title"><%= item.title %></span>
-	<span class="timestamp">
-		Posted <%= time_ago_in_words(item.created_at) %> ago.
-	</span>
-</li>
+<div class="col-sm-2 col-md-2 col-lg-2 col-centered">
+	<li class="single-item">
+		<%= image_tag(item.avatar.url(:thumb), alt: item.title, class: "item-image img-rounded") %>
+	</br>
+		<strong><span class="title"><%= item.title %></span></strong>
+		<button type="button" class="btn btn-success borrow-btn">Borrow!</button>
+	</li>
+</div>

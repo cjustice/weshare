@@ -13,6 +13,8 @@ gem 'bootstrap-will_paginate'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'json'
+gem "paperclip", "~> 4.1"
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
