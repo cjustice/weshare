@@ -12,6 +12,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    params.require(:item).permit(:content)
   end
+
+  private
+
+    def item_params
+      params.require(:item).permit(:avatar, :description, :title) #strong parameters
+    end
+
 end

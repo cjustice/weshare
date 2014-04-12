@@ -1,6 +1,6 @@
 <div class="col-sm-2 col-md-2 col-lg-2 col-centered">
 	<li class="single-item">
-		<%= image_tag(item.avatar.url(:thumb), alt: item.title, class: "item-image img-rounded") %>
+		<%= image_tag(item.avatar.url(:medium), alt: item.title, class: "item-image img-rounded") %>
 	</br>
 		<strong><span class="title"><%= item.title %></span></strong>
 		<button type="button" class="btn btn-success borrow-btn">Borrow!</button>

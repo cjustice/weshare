@@ -1,0 +1,21 @@
+<%= form_for @item, :html => {:role => 'form', :multipart=>true} do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <div class="form-group">
+      <%= f.label "Item Name" %>
+      <%= f.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+      <%= f.label "Picture" %>
+      <%= f.file_field :avatar, class: "form-control" %>
+  	  </div>
+
+  	  <%= f.submit "Submit Item", class: "btn btn-large btn-primary" %>
+
+<% end %>

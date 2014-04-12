@@ -231,9 +231,10 @@ input {
 }
 
 .single-item {
-  min-height: 200px;
-  min-width: 200px;
+  height: 220px;
+  width: 200px;
   display:block;
+  position: relative;
   background: $grayMediumLight;
   border-radius: 6px;
   overflow: hidden;
@@ -242,20 +243,27 @@ input {
     display: block;
     margin: 0 auto;
     padding-top: 10px;
+    max-width: 180px;
+    max-height: 180px;
   }
 
   .title {
     display: block;
     text-align: center;
+    width: 100%;
     text-decoration: bold;
-    margin-top: -4px;
+    position: absolute;
+    bottom: 60px;
   }
 
   .borrow-btn {
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    //left: 61px;
   }
 
 }
