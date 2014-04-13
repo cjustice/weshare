@@ -1,14 +1,18 @@
 <% if signed_in? %>
 	<div class="row">
-		<aside class="span4">
+		<aside class="span">
 	      <section>
 	        <%= render 'shared/user_info' %>
 	      </section>
-	      <section>
+	      <section class="form-section">
 	        <%= render 'shared/item_form' %>
 	      </section>
 	    </aside>
-	</div>
+<%#	   <div class="span8 recent-items"> %>
+ <%#  //<h3>Recently Added</h3>%>
+ <%#     		//<%= render 'shared/feed' %>
+ <%#   //	</div>%>
+<%#	</div> %>
 <% else %>
 <div class="center jumbotron">
  <h1>WeShare</h1>

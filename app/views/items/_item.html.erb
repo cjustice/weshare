@@ -5,4 +5,11 @@
 		<strong><span class="title"><%= item.title %></span></strong>
 		<button type="button" class="btn btn-success borrow-btn">Borrow!</button>
 	</li>
+
+	 <% if current_user?(item.user) %>
+    <%= link_to "delete", item, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: item.title %>
+  	<% end %>
+
 </div>
