@@ -66,6 +66,18 @@ p {
 
 
 /* header */
+.navbar {
+  .search-form {
+    height: auto;
+  }
+  .search-list-item {
+    height: 50px;
+  }
+  .search-button {
+    margin-top: -14px;
+    margin-bottom: 0px;
+  }
+}
 
 #logo {
   float: left;

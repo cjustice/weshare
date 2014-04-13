@@ -22,6 +22,15 @@ class ItemsController < ApplicationController
     redirect_to root_url
   end
 
+  def index
+    @search = params[:search].capitalize
+    if params[:search]
+      @items = Item.search(params[:search]).order("created_at DESC").paginate(page: params[:page])
+    else
+      @items = Item.all.order('created_at DESC')
+    end
+  end
+
   private
 
     def item_params
