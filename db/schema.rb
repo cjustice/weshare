@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140408024022) do
 
-  create_table "items", force: true do |t|
-    t.string   "type"
-    t.string   "title"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
