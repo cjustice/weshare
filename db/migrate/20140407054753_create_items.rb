@@ -1,7 +1,5 @@
 class CreateItems < ActiveRecord::Migration
-  def up
-    drop_table :items
-    
+  def change
     create_table :items do |t|
       t.string :type
       t.string :title
