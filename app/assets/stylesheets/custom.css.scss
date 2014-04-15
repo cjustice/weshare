@@ -66,6 +66,18 @@ p {
 
 
 /* header */
+.navbar {
+  .search-form {
+    height: auto;
+  }
+  .search-list-item {
+    height: 50px;
+  }
+  .search-button {
+    margin-top: -14px;
+    margin-bottom: 0px;
+  }
+}
 
 #logo {
   float: left;
@@ -112,6 +124,7 @@ footer {
   small {
     float: left;
   }
+
   ul {
     float: right;
     list-style: none;
@@ -158,6 +171,7 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* forms */
@@ -197,8 +211,107 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
+    }
+    
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
   }
+
+/* items */
+.items {
+  list-style: none;
+  overflow: hidden;
 }
+
+.pagination {
+    display: block;
+    padding-bottom: 15px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+    margin-left: 20px;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right: 100px;
+}
+
+.single-item {
+  height: 220px;
+  width: 200px;
+  display:block;
+  position: relative;
+  background: $grayMediumLight;
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    max-width: 180px;
+    max-height: 140px;
+  }
+
+  .title {
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-decoration: bold;
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .borrow-btn {
+    display: block;
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    bottom: 10px;
+    left: 35px;
+  }
+}
+
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+/*HOMEPAGE*/
+//.recent-items {
+  //width: 100%;
+  //@media (min-width: 714px) {
+  //  margin-top: -40px;
+  //  min-width: 550px;
+ // }
+//}
+
+///*.form-section {
+ // overflow: hidden;
+ // margin-top: -10px;
+//  @media (min-width: 714px) {
+  //  width: 300px;
+  //  margin: 0;
+  //  margin-right: 70px;
+ // }*/
+//}

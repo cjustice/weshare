@@ -1,0 +1,13 @@
+<% provide("Search Results") %>
+<%-# Insert GMAPS jscript only into the profile page -%>
+<% content_for(:header) do %>
+<% end %>
+<h3>Search Results for <%= "'#{@search}'" %> </h3>
+<div class="container">
+    <div class="row row-centered">
+    	<ol class="items">
+          <%= render @items %>
+        </ol>
+      <%= will_paginate @items%>
+    </div>
+</div>

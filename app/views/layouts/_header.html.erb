@@ -13,10 +13,17 @@
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav pull-right">
+  <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+    <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
+        <li class="search-list-item">
+          <%= form_tag(items_path, :method => 'get', class: "navbar-form", role: "search") do %>
+            <%= search_field_tag :search, params[:search], class: "form-control" %>
+            <%= button_tag "Search", class: "btn btn-default search-button"%>
+        <% end%>
+        </li>
           <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
             <li id="fat-menu" class="dropdown">

@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @items = @user.items.paginate(page: params[:page])
     @hash = Gmaps4rails.build_markers(@user) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
@@ -41,7 +42,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the WeShare!"
+      flash[:success] = "Welcome to WeShare!"
       redirect_to @user
     else
       render 'new'
@@ -67,15 +68,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation, :address)
-    end
-
-    #before filters
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url
-        flash[:danger] = "Please sign in"
-      end
     end
 
     def correct_user
