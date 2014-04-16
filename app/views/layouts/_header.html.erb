@@ -16,8 +16,6 @@
   <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
     <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
         <li class="search-list-item">
           <%= form_tag(items_path, :method => 'get', class: "navbar-form", role: "search") do %>
             <%= search_field_tag :search, params[:search], class: "form-control" %>
