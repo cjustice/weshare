@@ -297,6 +297,55 @@ aside {
   }
 }
 
+  .item-title {
+    margin-bottom: .75em;
+  }
+  .user-name-link {
+    text-decoration: none;
+  }
+
+  .image-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    background: $grayLight;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 2em;
+     @media (min-width: 714px) {
+        margin-left: 1em;
+        margin-right: 4em;
+        float: left;
+        max-width: 400px;
+      }
+  }
+  .item-display-image {
+    width: inherit;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .item-info {
+    @media (min-width: 714px) {
+    }
+  }
+  .info-list {
+    width: 100%;
+    padding-left: 0;
+  }
+  .item-description {
+    margin-bottom: .5em;
+  }
+  .info-list-item {
+    list-style: none;
+    margin-left: 0;
+    a {
+      text-decoration: none;
+    }
+  }
+
+
 /*HOMEPAGE*/
 //.recent-items {
   //width: 100%;

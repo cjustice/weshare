@@ -3,7 +3,7 @@
 		<%= image_tag(item.avatar.url(:medium), alt: item.title, class: "item-image img-rounded") %>
 	</br>
 		<strong><span class="title"><%= item.title %></span></strong>
-		<button type="button" class="btn btn-success borrow-btn">Borrow!</button>
+			<%= link_to "Borrow!", item, class: "btn btn-success borrow-btn" %>
 	</li>
 
 	 <% if current_user?(item.user) %>

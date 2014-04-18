@@ -14,7 +14,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = current_user.items.find(params[:id])
+    @item = Item.find(params[:id])
+    @user = @item.user
+    @hash = Gmaps4rails.build_markers(@user) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+    end
   end
 
   def destroy
