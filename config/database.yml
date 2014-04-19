@@ -19,7 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: connorjustice_weshare
   pool: 5
-  timeout: 5000
+  username: cjustice_rails
+  password: Sandy566
+  host: mysql.connorjustice.com
