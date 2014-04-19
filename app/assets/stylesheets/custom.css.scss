@@ -32,6 +32,10 @@ textarea {
   resize: vertical;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .center {
   text-align: center;
   h1 {
@@ -81,7 +85,9 @@ p {
     height: auto;
   }
   .search-list-item {
-    height: 50px;
+    @media (min-width: 550px) {
+      height: 50px;
+    }
   }
   .search-button {
     margin-top: -14px;
@@ -229,6 +235,10 @@ input {
     }
   }
 
+.user-info-partial {
+  a:hover { text-decoration: none; }
+}
+
 /* items */
 .items {
   list-style: none;
@@ -309,7 +319,7 @@ aside {
 }
 
   .item-title {
-    margin-bottom: .75em;
+    margin-bottom: .5em;
   }
   .user-name-link {
     text-decoration: none;
@@ -323,8 +333,8 @@ aside {
     padding: 10px;
     overflow: hidden;
     border-radius: 6px;
-    margin-bottom: 2em;
-     @media (min-width: 714px) {
+    margin-bottom: 1em;
+     @media (min-width: 550px) {
         margin-left: 1em;
         margin-right: 4em;
         float: left;
@@ -338,7 +348,7 @@ aside {
   }
 
   .item-info {
-    @media (min-width: 714px) {
+    @media (min-width: 550px) {
     }
   }
   .info-list {
@@ -356,11 +366,14 @@ aside {
     }
   }
 
+.email-button {
+  margin-bottom: 2em;
+}
 
 /*HOMEPAGE*/
 //.recent-items {
   //width: 100%;
-  //@media (min-width: 714px) {
+  //@media (min-width: 650px) {
   //  margin-top: -40px;
   //  min-width: 550px;
  // }
@@ -369,7 +382,7 @@ aside {
 ///*.form-section {
  // overflow: hidden;
  // margin-top: -10px;
-//  @media (min-width: 714px) {
+//  @media (min-width: 650px) {
   //  width: 300px;
   //  margin: 0;
   //  margin-right: 70px;
