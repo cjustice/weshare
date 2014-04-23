@@ -1,0 +1,2 @@
+<h1>WeShare!</h1>
+WeShare makes it easier for college students to share their stuff. Need a drill for your carpentry project? Have to iron some clothes? Use WeShare to find someone on your campus with the stuff you need, and share your stuff to make peoples' lives easier. WeShare was developed by <a href="http://github.com/cjustice">Connor Justice</a> and Erik Islo.
